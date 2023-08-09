@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,700&family=League+Spartan:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+--Dark-Gray: hsl(0, 0%, 63%);
+--Black: hsl(0, 0%, 0%);
+--White: hsl(0, 0%, 100%); 
+--Very-Dark-Gray: hsl(0, 0%, 27%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+}
+
+
+
+ul li {
+  list-style-type: none;
+}
+
+
+
+nav {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  transition: all 0.5s ease-in-out;
+}
+
+nav.open {
+  left: 0;
+  @apply bg-white shadow-lg lg:shadow-none lg:bg-transparent;
+}
+
+@media (min-width: 1024px) {
+  nav {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
