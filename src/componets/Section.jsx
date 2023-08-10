@@ -5,6 +5,7 @@ import Light from "../images/image-about-light.jpg";
 
 const Section = () => {
   return (
+    <>
     <section className='grid grid-cols-1 lg:grid-cols-3 '>
       <article >
         <img src={Dark} alt="dark" className='w-full' />
@@ -17,6 +18,11 @@ const Section = () => {
         <img src={Light} alt="light" className='w-full' />
       </article>
     </section>
+    <div className="text-center mt-3 bg-black text-gray-100 w-full flex-3">
+        <h1 className='py-2'>Challenge by Frontend Mentor. Coded by Vivek Rajput</h1>
+      </div>
+    </>
+    
   )
 }
 
